@@ -21,7 +21,7 @@ parch = st.sidebar.number_input('parents/children aboard', 0, 10, 0)
 sex_encoded = 1 if sex == 'male' else 0
 
 input_data = pd.DataFrame([[pclass, age, sibsp, parch, sex_encoded]], 
-                          columns = ['Pclass', 'Age', 'SibSp', 'Sex_male'])
+                          columns = ['Pclass', 'Age', 'SibSp', 'Parch', 'Sex_male'])
 
 if st.button('predict survival'):
     prediction = model.predict(input_data)[0]
